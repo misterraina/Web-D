@@ -55,6 +55,7 @@
     color: #666;
     font-size: 18px;
     line-height: 25px;
+    font-family: "Dosis", sans-serif;
   }
   
   .singlePostDesc::first-letter {

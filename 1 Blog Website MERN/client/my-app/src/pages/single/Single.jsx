@@ -1,13 +1,14 @@
-import "./single.css"
-import Sidebar from "../../Components/sidebar/Sidebar"
 import SinglePost from "../../Components/singlePost/SinglePost"
+import Sidebar from "../../Components/sidebar/Sidebar"
+import "./single.css"
 
-export default function single() {
+import React from 'react'
+
+export default function Single() {
   return (
     <div className="single">
-        <SinglePost/>
-        <Sidebar/>
-      
+      <SinglePost/>
+      <Sidebar/>
     </div>
   )
 }

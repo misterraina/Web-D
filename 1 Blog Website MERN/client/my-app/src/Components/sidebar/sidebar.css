@@ -1,67 +1,68 @@
-.sidebar {
+.sidebar{
     flex: 3;
-    height: fit-content;
-    margin: 20px;
+    margin-top: 20px;
     padding-bottom: 30px;
-    background-color: #fdfbfb;
+    background-color: #fbfbfb;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  
-  .sidebarItem {
+    font-family: "Dosis", sans-serif;
+    font-size: 15px;
+}
+
+.sidebarItem{
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  
-  .sidebarTitle {
+}
+
+.sidebarTitle{
     margin: 10px;
     padding: 5px;
     width: 80%;
-    border-top: solid 1px #a7a4a4;
-    border-bottom: solid 1px #a7a4a4;
-    text-align: center;
-    font-family: "Varela Round", sans-serif;
+    border-top: 1px solid #a7a4a4;
+    border-bottom: 1px solid #a7a4a4;
+    font-family: "Overlock SC";
     font-size: 12px;
-    line-height: 19px;
-    color: #222222;
+    color: #222;
     font-weight: 600;
-  }
-  
-  .sidebarItem > img {
+    line-height: 20px;
+    text-align: center;
+}
+
+.sidebarItem > img {
     margin-top: 15px;
     width: 250px;
     height: 250px;
   }
-  
-  .sidebarItem > p {
-    padding: 30px;
-  }
-  
-  .sidebarList {
-    list-style-type: none;
+
+.sidebarItem > p{
+    padding : 30px;
+}
+
+.sidebarList{
+    list-style: none;
     margin-bottom: 30px;
-  }
-  
-  .sidebarListItem {
+}
+
+.sidebarListItem{
     display: inline-block;
     width: 50%;
     margin-top: 15px;
     cursor: pointer;
-  }
-  
-  .sidebarSocial {
+}
+
+.sidebarSocial{
     margin-top: 15px;
     width: 250px;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  
-  .sidebarIcon {
+}
+
+.sidebarIcons{
     font-size: 16px;
     margin-left: 10px;
-  }
-  
+    cursor: pointer;
+}

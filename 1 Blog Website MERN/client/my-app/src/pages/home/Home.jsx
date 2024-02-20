@@ -1,15 +1,15 @@
-import "./home.css"
 import Header from "../../Components/header/Header"
-import Posts from "../../Components/posts/Posts"
-import Sidebar from "../../Components/sidebar/Sidebar"
+import Posts from "../../Components/posts/Posts";
+import Sidebar from "../../Components/sidebar/Sidebar";
+import "./home.css";
 
 export default function Home() {
   return (
     <>
-      <Header/>
+    <Header/>
     <div className="home">
-    <Posts/>
-    <Sidebar/>
+      <Posts/>
+      <Sidebar/>
     </div>
     </>
   )

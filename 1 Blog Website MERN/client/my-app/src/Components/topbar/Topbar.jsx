@@ -1,58 +1,32 @@
-import { Link } from "react-router-dom";
-import "./topbar.css";
+import './topbar.css'
 
 export default function Topbar() {
-  const user = true;
   return (
-    <div className="top">
+    <div className='top'>
+
       <div className="topLeft">
-        <i className="topIcon fab fa-facebook-square"></i>
-        <i className="topIcon fab fa-instagram-square"></i>
-        <i className="topIcon fab fa-pinterest-square"></i>
-        <i className="topIcon fab fa-twitter-square"></i>
+      <i class="topIcons fa-brands fa-facebook-f"></i>
+      <i class="topIcons fa-brands fa-x-twitter"></i>
+      <i class="topIcons fa-brands fa-instagram"></i>
+      <i class="topIcons fa-brands fa-pinterest-p"></i>
       </div>
+
       <div className="topCenter">
         <ul className="topList">
-          <li className="topListItem">
-            <Link className="link" to="/">
-              HOME
-            </Link>
-          </li>
-          <li className="topListItem">ABOUT</li>
-          <li className="topListItem">CONTACT</li>
-          <li className="topListItem">
-            <Link className="link" to="/write">
-              WRITE
-            </Link>
-          </li>
-          {user && <li className="topListItem">LOGOUT</li>}
+          <li className="topListItems">HOME</li>
+          <li className="topListItems">ABOUT</li>
+          <li className="topListItems">CONTACT</li>
+          <li className="topListItems">WRITE</li>
+          <li className="topListItems">LOGOUT</li>
         </ul>
       </div>
+
       <div className="topRight">
-        {user ? (
-          <Link className="link" to="/settings">
-            <img
-              className="topImg"
-              src="https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-              alt=""
-            />
-          </Link>
-        ) : (
-          <ul className="topList">
-            <li className="topListItem">
-              <Link className="link" to="/login">
-                LOGIN
-              </Link>
-            </li>
-            <li className="topListItem">
-              <Link className="link" to="/register">
-                REGISTER
-              </Link>
-            </li>
-          </ul>
-        )}
-        <i className="topSearchIcon fas fa-search"></i>
+        <img className="topImg" src="https://images.unsplash.com/photo-1524502397800-2eeaad7c3fe5?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="profile pic" />
+        
+        <i class="topSearchIcon fa-solid fa-magnifying-glass"></i>
+
       </div>
     </div>
-  );
+  )
 }
