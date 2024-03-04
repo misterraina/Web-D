@@ -6,9 +6,13 @@ import mongoose from "mongoose";
 const {connect, connection, disconnect } = 'mongoose';
 import usersRoute from "./routes/users.js";
 import postsRoute from "./routes/posts.js";
+import categoryRoute from "./routes/categories.js";
+import multer from "multer";
 
 config();
 app.use(express.json());
+app.use('/images', express.static('images'));
+
 
 
 const uri = process.env.MONGO_URL;
@@ -28,10 +32,23 @@ async function run() {
 }
 run().catch(console.dir);
 
+const storage = multer.diskStorage({
+  destination:(req, file, cb) => {cb(null, "images")
+},
+   filename:(req, file, cb) => {
+    cb(null,"hello.jpeg")
+  }
+})
+
+const upload = multer({storage:storage})
+app.post("/api/upload", upload.single("file"), (req, res) => {
+  res.status(200).json("File has been uploaded")
+})
 
 app.use("/api/auth", authRoute);
 app.use("/api/users", usersRoute);
 app.use("/api/posts", postsRoute);
+app.use("/api/categories", categoryRoute);
 
 
 app.listen("5000", () => {
